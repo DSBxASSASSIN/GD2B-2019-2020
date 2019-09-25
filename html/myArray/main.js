@@ -12,11 +12,14 @@ ball.draw(ctx);
 window.addEventListener('click', (e)=>{
     mouseVector.dx = e.clientX;
     mouseVector.dy = e.clientY;
-    difference.differenceVector(ball.position, mouseVector);
+    difference.differenceVector(ball.pos, mouseVector);
     
     if(difference.magnitude <= ball.radius){
-        ball.position.dx += 50;
-        ball.position.dy += 50;
+        ball.colorChange(getRandom(255), getRandom(255), getRandom(255));
         ball.draw(ctx);
     }
 })
+
+function getRandom(max){
+    return Math.floor(Math.random() * max);
+}
