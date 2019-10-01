@@ -21,3 +21,5 @@ function Update() {
     b.draw(ctx);
     l.defineLineByTwoPoints(a, b);
 }
+
+Update()
