@@ -12,23 +12,26 @@ let s = new Ball(new Vector2d(10, 10), 10, false, 1, 0, 0)
 
 let l = new Liniar(1, 1);
 let m = new Liniar(1, 1);
-let grid = new Grid(20, 50);
+
 
 
 
 function Update() {
     requestAnimationFrame(Update);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    grid.draw(ctx);
+
+    l.defineLineByTwoPoints(a, b);
     l.draw(ctx);
+
+    m.defineLineByTwoPoints(c, d);
     m.draw(ctx);
+
     a.draw(ctx);
     b.draw(ctx);
     c.draw(ctx);
     d.draw(ctx);
+
     s.draw(ctx);
-    l.defineLineByTwoPoints(a, b);
-    m.defineLineByTwoPoints(c, d);
 
     s.pos.dx = (m.intercept - l.intercept)/(l.slope-m.slope);
     s.pos.dy = (m.slope * s.pos.dx + m.intercept);
