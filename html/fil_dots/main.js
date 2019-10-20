@@ -46,6 +46,6 @@ function randomNumber(max){
 }
 
 function addPoint(){
-  let dot = new Ball(new Vector2d(randomNumber(ctx.canvas.width), randomNumber(ctx.canvas.height)), 30, "yellow");
+  let dot = new Ball(new Vector2d(randomNumber(ctx.canvas.width), randomNumber(ctx.canvas.height)), 30);
   dots.push(dot);
 }
