@@ -6,15 +6,15 @@ ctx.canvas.height = document.documentElement.clientHeight;
 let a = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 255);
 let b = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 0, 255);
 let c = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 0, 0, 255);
-let d = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false);
+let d = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 15, false);
 
-let l = new Liniar(1, 1);
-let m = new Liniar(1, 1);
-let n = new Liniar(1, 1);
+let l = new Liniar(1, 1, 2);
+let m = new Liniar(1, 1, 2);
+let n = new Liniar(1, 1, 2);
 
-let o = new Liniar(1, 1);
-let p = new Liniar(1, 1);
-let q = new Liniar(1, 1);
+let o = new Liniar(1, 1, 4);
+let p = new Liniar(1, 1, 4);
+let q = new Liniar(1, 1, 4);
 
 
 function Update(){
