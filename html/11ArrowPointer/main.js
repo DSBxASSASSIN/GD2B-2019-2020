@@ -10,8 +10,8 @@ function Update() {
     requestAnimationFrame(Update);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     
-    arrow.angle = Math.atan2((arrow.pos.dx - mouse.dx), (arrow.pos.dy - mouse.dy));
-    arrow.draw(ctx);
+    arrow.angle = Math.atan2((mouse.dy - arrow.pos.dy), ( mouse.dx - arrow.pos.dx));
+    arrow.draw(ctx); 
 }
 
 Update()
