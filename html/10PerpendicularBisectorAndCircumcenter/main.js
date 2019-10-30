@@ -25,6 +25,8 @@ let o = new Liniar(1, 1);
 let p = new Liniar(1, 1);
 let q = new Liniar(1, 1);
 
+let R;
+
 
 function Update(){
     requestAnimationFrame(Update);
@@ -80,9 +82,15 @@ function Update(){
     g.draw(ctx);
 
     //draw circle
+    R = (getLength(a, b) * getLength(b, c) * getLength(c, a)) / (Math.sqrt((getLength(a, b) + getLength(b, c) + getLength(a, c)) * 
+                                                                           (-getLength(a, b) + getLength(b, c) + getLength(a, c)) *
+                                                                           (getLength(a, b) - getLength(b, c) + getLength(a, c)) *
+                                                                           (getLength(a, b) + getLength(b, c) - getLength(a, c)) 
+                                                                            ));
+
     ctx.beginPath()
     ctx.strokeStyle = "black";
-    ctx.arc(g.pos.dx, g.pos.dy, radius, 0, 2 * Math.PI);
+    ctx.arc(g.pos.dx, g.pos.dy, R, 0, 2 * Math.PI);
     ctx.stroke();
     ctx.closePath()
     
@@ -93,4 +101,9 @@ Update();
 
 function getRandom(max){
     return Math.floor(Math.random() * max);
+}
+
+function getLength(a, b){
+    return Math.sqrt(Math.pow(b.pos.dy - a.pos.dy, 2) +
+                     Math.pow(b.pos.dx - a.pos.dx, 2));
 }
