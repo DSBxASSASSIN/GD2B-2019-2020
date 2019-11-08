@@ -90,7 +90,7 @@ function Update(){
 
     ctx.beginPath()
     ctx.strokeStyle = "black";
-    ctx.arc(g.pos.dx, g.pos.dy, R, 0, 2 * Math.PI);
+    ctx.arc(g.pos.dx, g.pos.dy, getLength(a, g), 0, 2 * Math.PI);
     ctx.stroke();
     ctx.closePath()
     

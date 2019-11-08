@@ -17,23 +17,23 @@ function Update(){
     ctx.canvas.width = document.documentElement.clientWidth;
     ctx.canvas.height = document.documentElement.clientHeight;
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-
+    
     l.defineLineByTwoPoints(a, b);
     l.draw(ctx);
-
+    
     d.pos.dx = (m.intercept - l.intercept)/(l.slope-m.slope);
     d.pos.dy = (m.slope * d.pos.dx + m.intercept);
     d.draw(ctx);
-   
+    
     m.slope = -1/l.slope;
     m.intercept = c.pos.dy - m.slope * c.pos.dx;
     m.draw(ctx);
-
+    
     a.draw(ctx);
     b.draw(ctx);
     c.draw(ctx);
-
-
+    
+    
 }
 
 Update();
