@@ -9,8 +9,8 @@ for (let i = 0; i < ammountOfWaypoints; i++) {
     waypoints.push(new Ball(new Vector2d(random(ctx.canvas.width), random(ctx.canvas.height)), 20, false, 255, 0, 0));
 }
 
-let currentWayPoint = 1;
 let ball = new DPoint(new Vector2d(waypoints[0].pos.dx, waypoints[0].pos.dy), 15, new Vector2d(0,0), new Vector2d(0,0), 255, 255, 0);
+let currentWayPoint = 1;
 
 function Update(){
     requestAnimationFrame(Update);
@@ -30,10 +30,18 @@ function Update(){
     }
     
     // balls controller
-    ball.vel.differenceVector(ball.pos, waypoints[currentWayPoint].pos);
+    ball.vel.differenceVector(waypoints[currentWayPoint].pos, ball.pos);
+    ball.vel.scalarMul(0.01);
+    console.log(ball.vel.magnitude);
+    if(ball.vel.magnitude < 0.1){
+        currentWayPoint++;
+        if(currentWayPoint > waypoints.length -1){
+            currentWayPoint = 0;
+        }
+    }
     ball.draw(ctx);
     ball.update();
-    ball.vel.draw(ctx, ball.pos);
+    ball.vel.draw(ctx, ball.pos, 10);
 }
 
 function random(max){
