@@ -9,7 +9,7 @@ let balls = [];
 function Update(){
     requestAnimationFrame(Update);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    let ball = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 30, getRandom(255), getRandom(255), getRandom(255));
+    let ball = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 30, getRandom(255), getRandom(255), getRandom(255));
     balls.push(ball);
 
     for(i = 0; i < balls.length; i++){

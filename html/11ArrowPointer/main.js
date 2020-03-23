@@ -3,8 +3,8 @@ const ctx = document.querySelector('canvas').getContext('2d');
 ctx.canvas.width = document.documentElement.clientWidth;
 ctx.canvas.height = document.documentElement.clientHeight; 
 
-let arrow = new Arrow(new Vector2d(ctx.canvas.width/2, ctx.canvas.height/2), 0, 3, 255, 10, 10);
-let mouse = new Vector2d(10, 10);
+let arrow = new Arrow(new Vector2(ctx.canvas.width/2, ctx.canvas.height/2), 0, 3, 255, 10, 10);
+let mouse = new Vector2(10, 10);
 
 function Update() {
     requestAnimationFrame(Update);

@@ -5,16 +5,16 @@ let angle = 0;
 let car = new Image();
 car.src = "images/car.png";
 
-car.pos = new Vector2d(0, 0);
-car.vel = new Vector2d(7, 0);
+car.pos = new Vector2(0, 0);
+car.vel = new Vector2(7, 0);
 
 let wheelFront = new Image();
 wheelFront.src = "images/wheel.png";
-wheelFront.pos = new Vector2d(0, 0);
+wheelFront.pos = new Vector2(0, 0);
 
 let wheelBack = new Image();
 wheelBack.src = "images/wheel.png";
-wheelBack.pos = new Vector2d(0, 0);
+wheelBack.pos = new Vector2(0, 0);
 
 
 car.addEventListener('load', ()=>{
@@ -36,11 +36,11 @@ function Update(){
 
     wheelFront.pos.dx = car.pos.dx;
     wheelFront.pos.dy = car.pos.dy;
-    wheelFront.pos.add(new Vector2d(673, 123));
+    wheelFront.pos.add(new Vector2(673, 123));
 
     wheelBack.pos.dx = car.pos.dx;
     wheelBack.pos.dy = car.pos.dy;
-    wheelBack.pos.add(new Vector2d(135, 123));
+    wheelBack.pos.add(new Vector2(135, 123));
     
     ctx.save();
     ctx.translate();

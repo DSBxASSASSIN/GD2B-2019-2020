@@ -6,7 +6,7 @@ ctx.canvas.height = document.documentElement.clientHeight;
 let balls = [];
 
 for(let j = 0; j < 100; j++){
-    let ball = new DPoint(new Vector2d(Random(ctx.canvas.width), Random(ctx.canvas.height)), 15, new Vector2d(7, 8), new Vector2d(0,1), Random(255), Random(255), Random(255),);
+    let ball = new DPoint(new Vector2(Random(ctx.canvas.width), Random(ctx.canvas.height)), 15, new Vector2(7, 8), new Vector2(0,1), Random(255), Random(255), Random(255),);
     balls.push(ball);
 }
 
@@ -21,7 +21,7 @@ function Update(){
         if(balls[i].pos.dy >= ctx.canvas.height + 20){
             balls[i].pos.dy = 100;
             balls[i].pos.dx = Random(ctx.canvas.width);
-            balls[i].vel = new Vector2d(7,8);
+            balls[i].vel = new Vector2(7,8);
         }
         
     }

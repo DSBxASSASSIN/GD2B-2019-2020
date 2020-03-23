@@ -3,8 +3,8 @@ const ctx = document.querySelector("canvas").getContext('2d');
 ctx.canvas.width = document.documentElement.clientWidth;
 ctx.canvas.height = document.documentElement.clientHeight;
 
-let a = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 15, true);
-let b = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 15, true);
+let a = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 15, true);
+let b = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 15, true);
 
 let l = new Liniar(1/3, 133);
 
@@ -20,7 +20,7 @@ function Update() {
     
 
     for (let x = 0; x < ctx.canvas.width; x+= 10) {
-        let a = new Ball(new Vector2d(x ,l.calcY(x)), 5);
+        let a = new Ball(new Vector2(x ,l.calcY(x)), 5);
         a.draw(ctx);
     }
 }

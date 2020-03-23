@@ -3,10 +3,10 @@ const ctx = document.querySelector('canvas').getContext('2d');
 ctx.canvas.width = document.documentElement.clientWidth;
 ctx.canvas.height = document.documentElement.clientHeight;
 
-let a = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true);
-let b = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true);
-let c = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true);
-let d = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false);
+let a = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true);
+let b = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true);
+let c = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true);
+let d = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false);
 
 let l = new Liniar(1, 1, 4);
 let m = new Liniar(1, 1, 4);

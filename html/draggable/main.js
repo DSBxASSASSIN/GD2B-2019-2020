@@ -4,7 +4,7 @@ ctx.canvas.width = document.documentElement.clientWidth;
 ctx.canvas.height = document.documentElement.clientWidth;
 
 
-let a = new Ball(new Vector2d(200, 200), 50, true, 255);
+let a = new Ball(new Vector2(200, 200), 50, true, 255);
 
 function Update(){
     requestAnimationFrame(Update);

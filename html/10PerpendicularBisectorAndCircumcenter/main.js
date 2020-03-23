@@ -3,17 +3,17 @@ const ctx = document.querySelector('canvas').getContext('2d');
 
 
 //main balls of the triangle
-let a = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 255);
-let b = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 0, 255);
-let c = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 0, 0, 255);
+let a = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 255);
+let b = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 0, 255);
+let c = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 20, true, 0, 0, 255);
 
 //median balls of the triangle
-let d = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false); 
-let e = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false);
-let f = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false);
+let d = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false); 
+let e = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false);
+let f = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, false);
 
 //middle ball of circle
-let g = new Ball(new Vector2d(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, true, 255, 255, 255);
+let g = new Ball(new Vector2(getRandom(ctx.canvas.width), getRandom(ctx.canvas.height)), 10, true, 255, 255, 255);
 
 //main lines of the triangle
 let l = new Liniar(1, 1);
